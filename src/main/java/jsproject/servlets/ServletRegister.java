@@ -23,7 +23,6 @@ public class ServletRegister extends HttpServlet {
 
 		user.setName(request.getParameter("name"));
 		user.setEmail(request.getParameter("email"));
-		user.setPassword(request.getParameter("password"));
 	}
 
 }
