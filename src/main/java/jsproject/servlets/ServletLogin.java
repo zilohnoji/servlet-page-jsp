@@ -10,34 +10,32 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jsproject.model.User;
 
-@WebServlet("/ServletForm")
-public class ServletRegister extends HttpServlet {
+@WebServlet("/ServletLog")
+public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public ServletRegister() {
+	public ServletLogin() {
 
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		User user = new User();
-
+		
 		String name = request.getParameter("name");
-		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 
-		if ((name != null && !name.isEmpty()) && (email != null && !email.isEmpty())
-				&& (password != null && !password.isEmpty())) {
+		if ((name.equals("admin") && !name.isEmpty()) && (password.equals("admin") && !password.isEmpty())) {
 			user.setName(name);
-			user.setEmail(email);
 			user.setPassword(password);
 		} else {
-			RequestDispatcher redirect = request.getRequestDispatcher("register.jsp");
-			request.setAttribute("msg", "Complete all information for the register");
+			RequestDispatcher redirect = request.getRequestDispatcher("index.jsp");
+			request.setAttribute("msg", "Enter valid values");
 			redirect.forward(request, response);
 		}
 	}

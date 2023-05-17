@@ -18,3 +18,101 @@ body {
   justify-content: center;
   display: flex;
 }
+
+label {
+  font-weight: 300;
+  margin-top: 0.5rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+input {
+  padding: 5px;
+  width: 20rem;
+  height: 2.5rem;
+  display: block;
+  border: none;
+  outline: none;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.container-form {
+  background-color: #fdfdfd;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  width: 26rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+  border: 2px solid #fdfdfd;
+}
+
+button {
+  height: 3rem;
+  margin-top: 1rem;
+  width: 13rem;
+  background-color: #55b95e;
+  border-radius: 7px;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  top: 1rem;
+  position: relative;
+}
+
+.unique {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+  font-weight: 600;
+  size: 2rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: rgb(0, 54, 170);
+}
+
+.button:active {
+  border: 1px solid rgb(69, 69, 194);
+}
+
+h4 {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(67, 15, 189);
+  bottom: 1rem;
+  position: relative;
+  font-size: 1rem;
+}
+
+.main {
+  width: 50rem;
+  height: 30rem;
+  border: 1px solid red;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.image {
+  width: 3rem;
+  height: 3rem;
+}
