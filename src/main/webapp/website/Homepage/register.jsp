@@ -7,7 +7,7 @@
 <head>
 <meta charset="ISO-8859-1" />
 <title>Panel - Register</title>
-<link rel="stylesheet" href="website/Homepage/css/style_homepage.css" />
+<link rel="stylesheet" href="css/style_register.css" />
 </head>
 
 <body>
