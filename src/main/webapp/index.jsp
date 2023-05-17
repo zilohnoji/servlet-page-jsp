@@ -5,25 +5,12 @@
 
 	<head>
 		<meta charset="ISO-8859-1" />
-		<title>JSProject</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<title>Homepage</title>
+		<link rel="stylesheet" href="website/Homepage/css/style_register.css" />
 	</head>
 
 	<body>
-		<div class="row">
-			<div class="container-form">
-				<form action="ServletForm" method="post">
-					<h1>Register</h1>
-					<input name="name" placeholder="Username" /> <input name="email" placeholder="E-mail" /> <input
-						name="password" type="password" placeholder="Password" />
-					<div class="unique">
-						<button class="button" type="submit">Sign-in</button>
-					</div>
-					<h4 class="style-h4">${msg}</h4>
-				</form>
-			</div>
-
-		</div>
+		<h1>Homepage</h1>
 	</body>
 
 	</html>
