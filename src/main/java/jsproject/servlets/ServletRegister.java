@@ -1,5 +1,9 @@
 package jsproject.servlets;
 
+import java.io.IOException;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,11 +22,24 @@ public class ServletRegister extends HttpServlet {
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		User user = new User();
 
-		user.setName(request.getParameter("name"));
-		user.setEmail(request.getParameter("email"));
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+
+		if ((name != null && !name.isEmpty()) && (email != null && !email.isEmpty())
+				&& (password != null && !password.isEmpty())) {
+			user.setName(name);
+			user.setEmail(email);
+			user.setPassword(password);
+		} else {
+			RequestDispatcher redirect = request.getRequestDispatcher("index.jsp");
+			request.setAttribute("msg", "Complete all information for the register");
+			redirect.forward(request, response);
+		}
 	}
 
 }

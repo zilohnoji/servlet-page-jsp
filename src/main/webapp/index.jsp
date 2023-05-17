@@ -10,16 +10,19 @@
 	</head>
 
 	<body>
-		<div class="container-form">
-			<form action="ServletForm" method="post">
-				<h1>Register</h1>
-				<input name="name" placeholder="Username" />
-				<input name="email" placeholder="E-mail" />
-				<input name="password" type="password" placeholder="Password" />
-				<div class="unique">
-					<button class="button" type="submit">Sign-in</button>
-				</div>
-			</form>
+		<div class="row">
+			<div class="container-form">
+				<form action="ServletForm" method="post">
+					<h1>Register</h1>
+					<input name="name" placeholder="Username" /> <input name="email" placeholder="E-mail" /> <input
+						name="password" type="password" placeholder="Password" />
+					<div class="unique">
+						<button class="button" type="submit">Sign-in</button>
+					</div>
+					<h4 class="style-h4">${msg}</h4>
+				</form>
+			</div>
+
 		</div>
 	</body>
 

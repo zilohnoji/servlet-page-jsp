@@ -86,3 +86,9 @@ input::placeholder {
 .button:active {
   border: 1px solid rgb(69, 69, 194);
 }
+
+h4 {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
